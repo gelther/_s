@@ -16,7 +16,7 @@ if ( ! function_exists( '_s_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function _s_setup() {
-	/*
+	/**
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on _s, use a find and replace
@@ -27,7 +27,7 @@ function _s_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
-	/*
+	/**
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
 	 * hard-coded <title> tag in the document head, and expect WordPress to
@@ -35,7 +35,7 @@ function _s_setup() {
 	 */
 	add_theme_support( 'title-tag' );
 
-	/*
+	/**
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
@@ -47,7 +47,7 @@ function _s_setup() {
 		'primary' => esc_html__( 'Primary', '_s' ),
 	) );
 
-	/*
+	/**
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
 	 */
@@ -59,7 +59,7 @@ function _s_setup() {
 		'caption',
 	) );
 
-	/*
+	/**
 	 * Enable support for Post Formats.
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
@@ -77,6 +77,7 @@ function _s_setup() {
 		'default-image' => '',
 	) ) );
 }
+
 endif;
 add_action( 'after_setup_theme', '_s_setup' );
 
