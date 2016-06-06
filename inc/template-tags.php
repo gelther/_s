@@ -35,8 +35,8 @@ function _s_posted_on() {
 	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
 }
+
 endif;
 
 if ( ! function_exists( '_s_entry_footer' ) ) :
@@ -76,6 +76,7 @@ function _s_entry_footer() {
 		'</span>'
 	);
 }
+
 endif;
 
 /**
@@ -119,4 +120,4 @@ function _s_category_transient_flusher() {
 	delete_transient( '_s_categories' );
 }
 add_action( 'edit_category', '_s_category_transient_flusher' );
-add_action( 'save_post',     '_s_category_transient_flusher' );
+add_action( 'save_post', '_s_category_transient_flusher' );
